@@ -8,7 +8,7 @@ typedef long double ld;
 #define FAIO ios_base::sync_with_stdio(false); cin.tie(NULL);
 #define test_cases int T;cin>>T;while(T--)
 
-bool check_vowel(char a){
+bool vowel_check(char a){
     bool flag;
     switch (a)
     {
@@ -39,8 +39,8 @@ int main(){
         cin>>N;cin.ignore();
         cin>>S;
         for(int i=0;i<N;i++){
-            check1=check_vowel(S[i]);
-            check2=check_vowel(S[i+1]);
+            check1=vowel_check(S[i]);
+            check2=vowel_check(S[i+1]);
            
             if(!check1 && check2){count++;}
         }
